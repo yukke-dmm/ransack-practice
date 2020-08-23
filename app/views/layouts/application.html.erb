@@ -8,6 +8,21 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <header>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
+          <li>
+            <%= link_to users_index_path do %>
+            生徒一覧
+            <% end %>
+          </li>
+        <% end %>
+        <li><%= link_to new_user_registration_path do%><i class="fas fa-user-plus"> 新規登録</i><%end%></li>
+        <li><%= link_to new_user_session_path do%><i class="fas fa-sign-in-alt"> 会員ログイン</i><%end%></li>
+      </ul>
+    </nav>
+  </header><!-- /header -->
 
   <body>
     <%= yield %>
