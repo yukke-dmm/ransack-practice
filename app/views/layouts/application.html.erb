@@ -17,6 +17,7 @@
             生徒一覧
             <% end %>
           </li>
+          <li><%= link_to destroy_user_session_path, method: :delete do %><i class="fas fa-sign-out-alt"> ログアウト</i><%end%></li
         <% end %>
         <li><%= link_to new_user_registration_path do%><i class="fas fa-user-plus"> 新規登録</i><%end%></li>
         <li><%= link_to new_user_session_path do%><i class="fas fa-sign-in-alt"> 会員ログイン</i><%end%></li>

@@ -4,6 +4,38 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name, autofocus: true, autocomplete: "名字" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autofocus: true, autocomplete: "名前" %>
+  </div>
+
+<!-- ラジオボタンにしないとエラーになるよ -->
+  <div class="field">
+    <%= f.label :gender %><br />
+    <%= f.radio_button :gender, false %><span>男性</span>
+    <%= f.radio_button :gender, true %><span>女性</span>
+  </div>
+
+  <div class="field">
+    <%= f.label :age %><br />
+    <%= f.text_field :age, autofocus: true, autocomplete: "年齢" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :club %><br />
+    <%= f.text_field :club, autofocus: true, autocomplete: "部活動" %>
+  </div>
+
+    <div class="field">
+    <%= f.label :grade %><br />
+    <%= f.text_field :grade, autofocus: true, autocomplete: "学年" %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
