@@ -20,7 +20,11 @@
 				<%= user.first_name %>
 			</td>
 			<td>
-				<%= user.gender %>
+				<% if user.gender == false %>
+				男
+				<%else%>
+				女
+				<%end%>
 			</td>
 			<td>
 				<%= user.age %>
