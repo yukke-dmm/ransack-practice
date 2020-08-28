@@ -1,3 +1,11 @@
+<h1>生徒一覧</h1>
+
+<%= search_form_for @search, url:users_index_path do |f|%>
+	<%= f.search_field :first_name_or_last_name_or_club_cont %>
+
+	<% f.submit "検索"%>
+<%end%>
+
 <table>
 	<caption>生徒管理</caption>
 	<thead>
@@ -11,7 +19,7 @@
 		</tr>
 	</thead>
 	<tbody>
-		<% @user.each do |user| %>
+		<% @users.each do |user| %>
 		<tr>
 			<td>
 				<%= user.last_name %>
